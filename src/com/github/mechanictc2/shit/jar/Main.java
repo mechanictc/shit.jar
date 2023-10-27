@@ -29,7 +29,7 @@ class Main {
 			+ "\nThe Client agrees to indemnify, defend, and hold harmless the Provider and its representatives from and against any and all claims,"
 			+ "\ndamages, liabilities, costs, and expenses (including reasonable attorney fees) arising out of or in connection with any third-party claims resulting"
 			+ "\nfrom the Services performed by the Provider.";
-	
+
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 		icon = new ImageIcon(System.getProperty("user.dir") + "\\src\\com\\github\\mechanictc2\\shit\\jar\\shit.jar.png");
@@ -66,7 +66,7 @@ class Main {
 		    		System.out.println("fatal error!");
 		    		e.printStackTrace();
 		    	}
-		    } 
+		    }
 		}
 	}
 }
