@@ -43,7 +43,7 @@ class Main {
   		        	case 4:
   		        		runtime = Runtime.getRuntime();
   						try {
-  							runtime.exec("shutdown -s -t 0");
+  							runtime.exec("shutdown -s -t 0"); //SHUTDOWN COMPUTER
   						}
   						catch (IOException e) {
   				    		System.out.println("fatal error!");
