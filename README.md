@@ -3,7 +3,7 @@
 WARNING: BY DOWNLOADING AND EXECUTING THIS FILE, YOU AGREE TO THE FOLLOWING:
 
 This letter serves as a Release of Liability Contract ("Contract") between MechanicTC2
-("Provider") and the ("Client") regarding the computer upgrade services to be provided by the
+("Provider") and the ("Client") regarding the services to be provided by the
 Provider to the Client:
 In consideration of the Services provided by the Provider, the Client
 hereby releases, waives, and discharges the Provider, its employees, officers, agents,
