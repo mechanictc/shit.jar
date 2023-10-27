@@ -7,6 +7,7 @@ import java.awt.Toolkit;
 import java.io.IOException;
 import java.util.Random;
 
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 class Main {
@@ -18,6 +19,7 @@ class Main {
 	private static Dimension screenSize;
 	private static Runtime runtime;
 	private static String title = "Thank you for downloading shit.jar!";
+	private static ImageIcon icon;
 	private static String disclaimer =
 			"\nThis letter serves as a Release of Liability Contract (\"Contract\") between MechanicTC2 (\"Provider\") and the (\"Client\") regarding the services to be"
 			+ "\nprovided by the Provider to the Client:"
@@ -30,7 +32,8 @@ class Main {
 	
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
-		result = JOptionPane.showConfirmDialog(null, disclaimer, title, JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE);
+		icon = new ImageIcon(System.getProperty("user.dir") + "\\src\\com\\github\\mechanictc2\\shit\\jar\\shit.jar.png");
+		result = JOptionPane.showConfirmDialog(null, disclaimer, title, JOptionPane.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE, icon);
 		if (result != JOptionPane.OK_OPTION) {
 		}
 		else {
