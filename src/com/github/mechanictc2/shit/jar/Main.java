@@ -21,7 +21,8 @@ class Main {
 	private static String title = "Thank you for downloading shit.jar!";
 	private static ImageIcon icon;
 	private static String disclaimer =
-			"\nThis letter serves as a Release of Liability Contract (\"Contract\") between MechanicTC2 (\"Provider\") and the (\"Client\") regarding the services to be"
+			"\nThank you for downloading shit.jar! Please read the following:"
+			+ "\nThis letter serves as a Release of Liability Contract (\"Contract\") between MechanicTC2 (\"Provider\") and the (\"Client\") regarding the services to be"
 			+ "\nprovided by the Provider to the Client:"
 			+ "\nIn consideration of the Services provided by the Provider, the Client hereby releases, waives, and discharges the Provider,"
 			+ "\nits employees, officers, agents, and affiliates from any and all claims, damages, liabilities, actions,or causes of action arising"
