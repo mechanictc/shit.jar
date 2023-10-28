@@ -10,6 +10,12 @@ import java.util.Random;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
+/**
+ * shit.jar is a harmless virus that I programmed. Read the disclaimer!!
+ * @author Nathan Kwok
+ * @since 2023-10-25
+ * @version v1.10.0
+ */
 class Main {
 	private static int xCoord;
 	private static int yCoord;
